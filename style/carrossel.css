@@ -1,0 +1,130 @@
+.carrossel__título{
+    background-color: var(--Branco);
+    color: var(--Laranja);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1em 0 0.5em;
+}
+
+.swiper-slide IMG{
+    width: 100%;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    display: none; /*Removeu as setas < e a > "seta de próximo e voltar"*/
+}
+
+.swiper-pagination{
+    position: initial;
+    margin: .5em 0;
+}
+
+.Card__Descrição{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.Card__Botão{
+    display:flex;
+    justify-content: space-between;
+}
+
+.Botão{
+    display: flex;
+}
+
+.Card{
+    border-radius: 10px;
+    background: var(--Branco);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin:1em;
+    padding: 1em;
+}
+
+.Descrição__título{
+    color:var(--Laranja); 
+    font-weight: 700;
+}
+
+.Descrição__título-livro{
+    color: var(--AZUL);
+    font-size:18px;
+    font-weight: 700;
+    margin:0.5em 0;
+}
+
+.Botão__item{
+    margin: 0 0.5em;
+}
+
+.Botão__ancora{
+    background-color: var(--Laranja);
+    padding: 1em 2.2em;
+    color: var(--Branco);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.Descrição__texto{
+    font-size: 14px;
+}
+
+@media screen and (min-width:1024px){
+    .carrossel__título{
+        font-size: 26px;
+    }
+
+    .swiper-pagination{
+        margin: 2em 0 3em;
+    }
+
+    .swiper{
+        width: 60%;
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+        display: block;
+        top: 60%;
+    }
+
+    .Card{
+        width: 40%;
+        margin: 2em auto;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .carrossel__contrainer{
+        display: flex;
+        margin: 0 20vw 3em;
+        align-items: center;
+    }
+
+    .Descrição__título{
+        font-size: 32px;
+    }
+
+    .Descrição__texto{
+        font-size: 16px;
+    }
+
+    .Descrição{
+        margin-right:2em;
+    }
+
+    .swiper-pagination{
+        margin: 1em 0;
+    }
+
+    .swiper{
+        width: 50%;
+    }
+
+    .card{
+        width: 60%;
+        margin-left: 1em;
+    }
+}

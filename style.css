@@ -1,0 +1,27 @@
+@import url("style/header.css"); /*Essa é uma das formas de importar arquivos para o site, e como esse arquivo é de 
+estirilização é importando por aqui no css, deixe o carregamento mais rápido e não fica carregando um de cada vez. */
+@import url("style/banner.css");/*Esse ele está importanto um  arquivo que customizou o BANNER*/
+@import url("style/carrossel.css");/*Está importanto o aquivo que customizou o CARROSSEL*/ 
+@import url("style/Tópicos.css");
+@import url("style/Contato.css");
+@import url("style/Roda-pé.css");
+
+:root{
+    --Fundo-cinza: #EBECEE;
+    --Branco: #ffffff;
+    --Laranja: #EB9B00;
+    --AZUL: #002F52;
+    --Preto: #000;
+    --Cinza: #474646;
+    --Claro-Cinza: #858585;
+    --azul-degrade: linear-gradient(97.54deg,#002F52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins"
+    --fonte-secundaria: "Josefin Sans";
+}
+
+body{
+    background-color: var(--Fundo-cinza);
+    font-family: var(--fonte-principal);
+    font-size:16px;
+    font-weight: 400;
+}

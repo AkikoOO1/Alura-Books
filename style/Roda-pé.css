@@ -1,0 +1,55 @@
+hr{
+    margin: 0;
+}
+
+.Roda-pé{
+    background-color: var(--Branco);
+    padding: 1em;
+}
+
+.lista-roda-pé{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .Roda-pé{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .Roda-pé__Título{
+    font-size:24px;
+}
+
+.lista-roda-pé{
+    display: block;
+}
+
+    .lista-roda-pé__item{
+        display: flex;
+        align-items: center;
+        margin: 0.6em;
+    }
+
+    .lista-roda-pé__Link{
+        color: var(--Cinza);
+        text-decoration: none;
+        margin-left: 0.6em;
+    }
+
+    .lista-roda-pé__Titulo{
+        font-size: 14px;
+        color: var(--Claro-Cinza);
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .lista-roda-pé{
+        border-left: 1px solid var(--Claro-Cinza);
+        padding-left: 1em;
+    }
+
+    .Roda-pé{
+        padding: 3em 0;
+    }
+}

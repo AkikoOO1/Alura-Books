@@ -1,0 +1,154 @@
+.Cabeçalho__Menu-hamburguer{
+    width: 25pt ;
+    height: 25pt;
+    background-image: url("../IMG/Menu.svg"); /*Colocou os dois pontos .. pois coms eleso css não tem  que ficar procurando em qual página está.
+    e com s dois pontod ele voltou para a págian e conseguiu encontrar o aquivo queestava.*/
+    background-repeat: no-repeat; /*Não deixa a img repetir*/
+    background-position: center; /*Centralizou a img*/
+    display:inline-block;
+}
+
+.container__botão:checked ~ .container_rótulo > .Cabeçalho__Menu-hamburguer {
+    background-image: url("../IMG/Menu Aberto.svg"); /*Adicionou a imagem do menu aberto*/  
+}
+
+.container__botão:checked ~ .container_rótulo{
+    background: var(--azul-degrade);
+}
+
+.Cabeçalho{
+    background-color: var(--Branco-Fundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.Container-img{
+    padding: 0.5em;
+}
+
+.Lista-menu{
+    Display:none;
+    position:absolute; 
+    top:100%;
+    width: 50vw; /*A medida vw pega a medida da tela*/
+    background-color: var(--Branco);
+}
+
+.container__botão:checked~.Lista-menu{
+    display: block;
+}
+
+.Lista-menu__título, .Lista-menu__item{
+    padding:1em;
+    background-color: var(--Branco-Fundo);
+}
+
+.Lista-menu__título{
+    color: var(--Laranja);
+    font-weight: 700;
+}
+
+.Lista-menu__link{
+    background: var(--azul-degrade); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase; 
+}
+
+.container__botão, .Container__titulo, .opções, .Container__texto{/*É para fazer o Título desaparecer quando o tamanho do layout for menor que 1024*/
+    display:none; 
+}
+
+
+@media screen and (min-width: 1024px ){ /*Layout para Tablets*/
+
+    .Container__titulo, .Container__titulo--negrito{
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .Container__titulo--negrito{
+        font-weight: 700;
+    }
+
+    .Container__titulo{
+        font-weight: 400;
+        display: block; /*Graças a esse diplay faz o Título aparecer novamente, quando a tela tiver 1024 de layout ou mais*/
+    }
+
+    .opções{
+        display: flex;
+    }
+
+    .opções__item{
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opções__link{
+    text-decoration: none;
+    color: var(--Preto);
+}
+
+    .Cabeçalho__Menu-hamburguer, .Container-Transparente{
+        display: none; /*Faz o coraçãozinho e o menu hambúrguer desaparecer quando o layout tiver 1024px ou mais*/
+    }
+
+    .opções__botão:checked ~ .Lista-menu{/*Reutilizou os mesmos conceitos anteriormente*/
+        display: block;
+        width: auto;
+    }
+
+    .opções__botão{
+        display: none; /*Faz o quadradinho pequeno desaparecer.*/
+    }
+
+    .opções__botão:checked ~ .opções__rótulo > .opções__item{
+        background: var(--azul-degrade);
+        color: var(--Branco);
+    }
+
+    .opções__item{
+    padding: 2em 1em; 
+}
+
+    .Lista-menu__item:hover { /*Fez com que o fundo mudasse de cor, quando passamos o mouse em cima, porém não mudou a cor da fonte*/
+        background: var(--azul-degrade);
+    }
+
+    .Lista-menu__item:hover > .Lista-menu__link{ /*Fez com ue a cor da fonte mudasse de cor quando o mouse passa em cima, porém não mudou a cor de fundo*/
+        -webkit-text-fill-color: var(--Branco);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px){ /*Layout para Descktop-Computadores*/
+    .Container__Link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--Preto);
+    }
+
+.Container__texto{
+    display: block;
+}
+
+    .Cabeçalho{
+        padding: 0 2em;
+    }
+
+    .opções{
+        margin-right: auto;
+    }
+
+}
